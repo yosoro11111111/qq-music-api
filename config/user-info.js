@@ -7,7 +7,7 @@ fs.existsSync(infoPath) || fs.writeFileSync(infoPath, '{}', 'utf-8');
 
 const initData = () => {
   
-  userInfo = { loginUin: '', cookie: '', ...JSON.parse(fs.readFileSync(infoPath, 'utf-8')) };
+  userInfo = { loginUin: '', cookie: '123', ...JSON.parse(fs.readFileSync(infoPath, 'utf-8')) };
   cookieList = userInfo.cookie.split('; ').map(_ => _.trim());
 
   cookieObject = {};
